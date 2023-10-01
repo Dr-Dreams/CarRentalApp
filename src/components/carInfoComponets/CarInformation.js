@@ -82,6 +82,8 @@ function CarInformation({ car }) {
               src={car.carImage}
               alt={car.carImage}
               style={{ width: "100%", height: "100%", objectFit: "fill" }}
+              width={500}
+              height={500}
             />
           </div>
 

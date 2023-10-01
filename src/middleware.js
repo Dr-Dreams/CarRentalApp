@@ -13,7 +13,7 @@ export function middleware(request) {
 
     // if the token is present & if it is a public route, redirect to home
     if (token && publicRoute) {
-        return NextResponse.redirect(new URL("/", request.url));
+        return NextResponse.redirect(new URL("/home", request.url));
     }
 
     return NextResponse.next();
