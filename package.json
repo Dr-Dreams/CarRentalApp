@@ -9,15 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.6",
+    "antd": "^5.9.4",
+    "axios": "^1.5.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.5.3",
+    "next": "latest",
+    "nodemailer": "^6.9.5",
+    "prop-types": "^15.8.1",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-redux": "^8.1.2",
+    "react-stripe-checkout": "^2.6.3",
+    "redux": "^4.2.1",
+    "stripe": "^13.8.0"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
+    "autoprefixer": "^10.4.16",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
   }
 }
