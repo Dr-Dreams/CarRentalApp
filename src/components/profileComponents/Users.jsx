@@ -1,5 +1,5 @@
 import { SetLoading } from "@/redux/loadersSlice";
-import { Table, message } from "antd";
+import { Select, Table, message } from "antd";
 import axios from "axios";
 import React from "react";
 import moment from "moment";
@@ -22,7 +22,7 @@ function Users() {
 
   React.useEffect(() => {
     getData();
-  }, [""]);
+  }, []);
 
   const onUserUpdate = async (id, isActive) => {
     try {
@@ -60,12 +60,19 @@ function Users() {
       title: "Status",
       dataIndex: "isActive",
       render: (isActive, record) => (
-        <select
+        <Select
           value={isActive}
-          onChange={(e) => onUserUpdate(record._id, e.target.value)}>
-          <option value={true}>Active</option>
-          <option value={false}>Inactive</option>
-        </select>
+          options={[
+            {
+              value: true,
+              label: "true",
+            },
+            {
+              value: false,
+              label: "false",
+            },
+          ]}
+          onChange={(value) => onUserUpdate(record._id, value)}></Select>
       ),
     },
   ];
