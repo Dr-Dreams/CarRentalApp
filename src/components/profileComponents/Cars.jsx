@@ -39,7 +39,7 @@ function Cars() {
 
   React.useEffect(() => {
     getData();
-  }, []);
+  }, [""]);
 
   const columns = [
     {

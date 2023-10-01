@@ -22,7 +22,7 @@ function Users() {
 
   React.useEffect(() => {
     getData();
-  }, []);
+  }, [""]);
 
   const onUserUpdate = async (id, isActive) => {
     try {

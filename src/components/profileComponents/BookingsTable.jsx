@@ -47,7 +47,7 @@ function BookingsTable() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [""]);
 
   const columns = [
     {
@@ -97,8 +97,7 @@ function BookingsTable() {
               onClick={() => {
                 setSelectedBooking(record);
                 setShowCancelModel(true);
-              }}
-            >
+              }}>
               Cancel
             </span>
           )}
@@ -117,8 +116,7 @@ function BookingsTable() {
           title="Cancel Booking"
           okText="Cancel Booking"
           cancelText="Close"
-          onOk={onCancel}
-        >
+          onOk={onCancel}>
           <div className="flex flex-col gap-5">
             <span>
               Are you sure you want to cancel booking with id ?

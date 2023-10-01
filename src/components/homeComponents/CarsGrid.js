@@ -10,7 +10,7 @@ function CarsGrid({ cars }) {
   return (
     <Row gutter={[16, 16]}>
       {cars.map((car) => (
-        <Col span={6} className="text-xl">
+        <Col span={6} className="text-xl" key={car._id}>
           <div>
             <Card
               style={{
@@ -22,7 +22,8 @@ function CarsGrid({ cars }) {
                 <Image
                   alt={car.carImage}
                   src={car.carImage}
-                  style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                  width={500}
+                  height={500}
                 />
               </div>
               <div className="text-black dark:text-white text-md mt-2 mb-[-16px]">
@@ -61,4 +62,5 @@ function CarsGrid({ cars }) {
 }
 
 export default CarsGrid;
+
 

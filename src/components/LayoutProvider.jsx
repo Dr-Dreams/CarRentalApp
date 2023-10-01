@@ -1,6 +1,6 @@
 "use client";
 import { ConfigProvider, message } from "antd";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import axios from "axios";
 import { SetCurrentUser } from "@/redux/usersSlice";
@@ -15,7 +15,7 @@ function LayoutProvider({ children }) {
   const router = useRouter();
   const pathname = usePathname();
   const dispatch = useDispatch();
-  const getCurrentUser = async () => {
+  const getCurrentUser = useCallback(async () => {
     try {
       dispatch(SetLoading(true));
       const response = await axios.get("/api/users/currentuser");
@@ -25,7 +25,7 @@ function LayoutProvider({ children }) {
     } finally {
       dispatch(SetLoading(false));
     }
-  };
+  }, [dispatch]);
 
   const onLogout = async () => {
     try {
