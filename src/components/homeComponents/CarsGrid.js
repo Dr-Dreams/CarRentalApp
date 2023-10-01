@@ -3,6 +3,7 @@ import { Col, Row } from "antd";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Card from "antd/es/card/Card";
+import Image from "next/image";
 
 function CarsGrid({ cars }) {
   const router = useRouter();
@@ -18,7 +19,7 @@ function CarsGrid({ cars }) {
               }}
               className="block w-max bg-gray-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
               <div style={{ height: "200px", overflow: "hidden" }}>
-                <img
+                <Image
                   alt={car.carImage}
                   src={car.carImage}
                   style={{ width: "100%", height: "100%", objectFit: "fill" }}
@@ -61,20 +62,3 @@ function CarsGrid({ cars }) {
 
 export default CarsGrid;
 
-{
-  /* <div
-  className="card cursor-pointer"
-  onClick={() => router.push(`/cars/${car._id}`)}
->
-  <img src={car.carImage} alt={car.carImage} height="300" width="100%" />
-
-  <div className="py-3 px-2">
-    <h1 className="text-md">
-      {car.name}
-    </h1>
-    <h1 className="text-md"> Fuel Type - {car.fuelType}</h1>
-    <h1 className="text-md"> Price - {car.rentPerHour}/Hour</h1>
-    <h1 className="text-md"> Maximum Capacity - {car.seatingCapacity} Members</h1>
-  </div>
-</div> */
-}

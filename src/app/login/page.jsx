@@ -10,6 +10,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { SetLoading } from "@/redux/loadersSlice";
+import Image from "next/image";
 
 function Login() {
   const router = useRouter();
@@ -35,10 +36,12 @@ function Login() {
             <a
               href="#"
               className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-              <img
+              <Image
                 className="w-8 h-8 mr-2"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                 alt="logo"
+                width={24}
+                height={24}
               />
               Bharat Car Rental
             </a>

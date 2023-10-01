@@ -129,8 +129,8 @@ function CarForm({
           <Col span={12}>
             <Form.Item
               label={
-                <p className="block mb-2 text-base font-semibold text-gray-900 ">
-                  Seating Capacity"
+                <p className="block mb-2 text-base font-semibold text-gray-900">
+                  Seating Capacity
                 </p>
               }
               name="seatingCapacity"

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { SetLoading } from "@/redux/loadersSlice";
 import StripeCheckout from "react-stripe-checkout";
+import Image from "next/image";
 
 const { RangePicker } = DatePicker;
 
@@ -77,7 +78,7 @@ function CarInformation({ car }) {
             {car?.name}
           </h1>
           <div style={{ height: "75vh", overflow: "hidden" }}>
-            <img
+            <Image
               src={car.carImage}
               alt={car.carImage}
               style={{ width: "100%", height: "100%", objectFit: "fill" }}

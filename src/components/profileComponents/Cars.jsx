@@ -4,6 +4,7 @@ import CarForm from "./CarForm";
 import { useDispatch } from "react-redux";
 import { SetLoading } from "@/redux/loadersSlice";
 import axios from "axios";
+import Image from "next/image";
 
 function Cars() {
   const [cars, setCars] = React.useState([]); // [{}
@@ -45,7 +46,7 @@ function Cars() {
       title: "Car Image",
       dataIndex: "carImage",
       render: (carImage) => (
-        <img src={carImage} alt="car" width="50" height="50" />
+        <Image src={carImage} alt="car" width="50" height="50" />
       ),
     },
     {
